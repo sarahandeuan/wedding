@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Euan • May 30, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #8B9D83;
+            --cream: #F8F6F3;
+            --charcoal: #2C2C2C;
+            --rose: #D4A5A5;
+            --gold: #C9A961;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--cream) 0%, #EDE9E3 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 157, 131, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 165, 165, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .ampersand {
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            color: var(--sage);
+            display: inline-block;
+            margin: 0 0.5rem;
+            font-style: italic;
+        }
+
+        .hero-date {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            font-weight: 300;
+            margin-top: 1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .hero-location {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            color: var(--charcoal);
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.3s forwards;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.8s forwards, bounce 2s ease-in-out 2.8s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--sage), transparent);
+            margin: 0 auto 10px;
+        }
+
+        .scroll-indicator::after {
+            content: 'Scroll';
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--sage);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 120px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+            margin: 2rem auto 0;
+        }
+
+        /* Our Story */
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            text-align: center;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Details Section */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .detail-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 2px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sage), var(--rose), var(--gold));
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .detail-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .detail-card .time {
+            font-weight: 500;
+            color: var(--sage);
+            margin-top: 0.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 800px;
+            margin: 4rem auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--sage), var(--rose));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: calc(50% - 40px);
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            background: var(--gold);
+            border: 4px solid var(--cream);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .timeline-time {
+            font-size: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+
+        .timeline-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* RSVP Section */
+        #rsvp {
+            background: linear-gradient(135deg, var(--sage) 0%, #7A8D73 100%);
+            color: var(--white);
+            padding: 120px 20px;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        #rsvp .section-title {
+            color: var(--white);
+        }
+
+        #rsvp .section-title::after {
+            background: var(--white);
+        }
+
+        .rsvp-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .rsvp-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--white);
+            color: var(--sage);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .rsvp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: var(--cream);
+        }
+
+        /* Travel Section */
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .travel-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 2px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .travel-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--sage);
+        }
+
+        .travel-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .travel-card a {
+            color: var(--sage);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid var(--sage);
+            transition: all 0.3s ease;
+        }
+
+        .travel-card a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* FAQ Section */
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--cream);
+        }
+
+        .faq-question h3 {
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--sage);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.5rem;
+        }
+
+        .faq-answer p {
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .footer-hearts {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: var(--rose);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100%;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .details-grid,
+            .travel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>
+                Sarah <span class="ampersand">&</span> Euan
+            </h1>
+            <div class="hero-date">May 30, 2026</div>
+            <div class="hero-location">Taypark House • Dundee, Scotland</div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section id="story">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-content">
+            <p>From the moment we met, we knew there was something special. What started as a chance encounter in Edinburgh blossomed into a love story that continues to unfold with each passing day.</p>
+            <p>Through adventures in the Scottish Highlands, quiet evenings by the fire, and everything in between, we've built a life filled with laughter, love, and countless memories.</p>
+            <p>Now, we're thrilled to invite you to celebrate the next chapter of our journey as we say "I do" at the beautiful Taypark House in Dundee, surrounded by the people we love most.</p>
+        </div>
+    </section>
+
+    <!-- Wedding Details Section -->
+    <section id="details">
+        <h2 class="section-title">Wedding Details</h2>
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="detail-icon">💒</div>
+                <h3>Ceremony</h3>
+                <p>Taypark House<br>Dundee, Scotland<br>DD2 1PD</p>
+                <p class="time">3:00 PM</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">🥂</div>
+                <h3>Reception</h3>
+                <p>Following the ceremony<br>Taypark House Gardens</p>
+                <p class="time">5:00 PM</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon">🍽️</div>
+                <h3>Dinner</h3>
+                <p>Three-course meal<br>with wine pairings</p>
+                <p class="time">7:00 PM</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 6rem;">Schedule</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">3:00 PM</div>
+                    <div class="timeline-title">Ceremony</div>
+                    <div class="timeline-description">Join us as we exchange vows in the stunning ceremony room at Taypark House.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">4:00 PM</div>
+                    <div class="timeline-title">Cocktail Hour</div>
+                    <div class="timeline-description">Canapés and drinks in the gardens while we take photos.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">5:30 PM</div>
+                    <div class="timeline-title">Reception</div>
+                    <div class="timeline-description">Speeches, toasts, and celebration with family and friends.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">7:00 PM</div>
+                    <div class="timeline-title">Dinner</div>
+                    <div class="timeline-description">A delicious three-course meal featuring the finest Scottish ingredients.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-time">9:00 PM</div>
+                    <div class="timeline-title">Dancing</div>
+                    <div class="timeline-description">Let's dance the night away! Music, cake cutting, and celebration until midnight.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <h2 class="section-title">RSVP</h2>
+        <div class="rsvp-content">
+            <p>We hope you can join us for our special day! Please respond by March 30, 2026.</p>
+            <p>Kindly let us know if you'll be attending and any dietary requirements you may have.</p>
+            <a href="https://forms.google.com/your-form-link" class="rsvp-button">Respond Here</a>
+            <p style="margin-top: 2rem; font-size: 0.95rem;">Or contact us directly at:<br><strong>wedding@sarahandeuan.com</strong></p>
+        </div>
+    </section>
+
+    <!-- Travel & Accommodation Section -->
+    <section id="travel">
+        <h2 class="section-title">Travel & Stay</h2>
+        <div class="travel-grid">
+            <div class="travel-card">
+                <h3>Getting There</h3>
+                <p><strong>By Air:</strong> Edinburgh Airport (1 hour drive) or Glasgow Airport (1.5 hours)</p>
+                <p><strong>By Train:</strong> Dundee Railway Station (10 minutes from venue)</p>
+                <p><strong>By Car:</strong> Free parking available at Taypark House</p>
+            </div>
+            <div class="travel-card">
+                <h3>Accommodation</h3>
+                <p><strong>Apex City Quay Hotel</strong><br>1 West Victoria Dock Road<br><a href="tel:01382202404">01382 202 404</a></p>
+                <p style="margin-top: 1rem;"><strong>Malmaison Dundee</strong><br>44 Whitehall Crescent<br><a href="tel:01382339715">01382 339 715</a></p>
+                <p style="margin-top: 1rem; font-size: 0.85rem; font-style: italic;">Mention "Sarah & Euan's Wedding" for special rates</p>
+            </div>
+            <div class="travel-card">
+                <h3>Local Attractions</h3>
+                <p>While in Dundee, visit the V&A Museum, Discovery Point, and enjoy a walk along the beautiful River Tay waterfront.</p>
+                <p style="margin-top: 1rem;">The city center is just 10 minutes from the venue with shops, restaurants, and pubs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What should I wear?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We're asking for formal attire. Think elegant dresses, suits, and kilts are absolutely encouraged! The ceremony and reception will be indoors, but we'll have some time in the gardens for photos.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I bring a plus-one?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Due to venue capacity, we're only able to accommodate guests formally invited on your invitation. If you received a plus-one, it will be indicated on your invitation.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Are children welcome?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We love your little ones, but we've decided to make our wedding an adults-only celebration. We hope this gives you a chance to enjoy a night off!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What about dietary requirements?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Please let us know about any dietary requirements or allergies when you RSVP, and we'll make sure you're well catered for on the day.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Will there be transportation?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We'll have shuttle buses running between the recommended hotels and Taypark House. Details will be sent closer to the date.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What about gifts?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Your presence is the greatest gift! However, if you'd like to give something, we'd be grateful for contributions to our honeymoon fund. Details will be included with your invitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-hearts">♥ ♥ ♥</div>
+        <p>We can't wait to celebrate with you!</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">© 2026 Sarah & Euan</p>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
