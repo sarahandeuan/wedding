@@ -17,9 +17,7 @@ const content = {
     story: {
         title: "Our Story",
         paragraphs: [
-            "From the moment we met, we knew there was something special. What started as a chance encounter in Edinburgh blossomed into a love story that continues to unfold with each passing day.",
-            "Through adventures in the Scottish Highlands, quiet evenings by the fire, and everything in between, we've built a life filled with laughter, love, and countless memories.",
-            "Now, we're thrilled to invite you to celebrate the next chapter of our journey as we say \"I do\" at the beautiful Taypark House in Dundee, surrounded by the people we love most."
+            "Euan and Sarah met during a summer in college and quickly realized they were meant to be together, even across two countries. Over the years, they shared life in Scotland and the U.S., grew closer through every challenge, and eventually settled in Boston, where they married in a small, heartfelt celebration. Now they spend their days together with their cat, Cookie, and can't wait to share this next chapter with you."
         ],
         // Optional: Add couple photo (800x600px or 1200x800px recommended)
         couplePhoto: "images/couple-photo.jpg",
@@ -195,16 +193,8 @@ const content = {
                 answer: "Due to venue capacity, we're only able to accommodate guests formally invited on your invitation. If you received a plus-one, it will be indicated on your invitation."
             },
             {
-                question: "Are children welcome?",
-                answer: "We love your little ones, but we've decided to make our wedding an adults-only celebration. We hope this gives you a chance to enjoy a night off!"
-            },
-            {
                 question: "What about dietary requirements?",
                 answer: "Please let us know about any dietary requirements or allergies when you RSVP, and we'll make sure you're well catered for on the day. There will be vegan and vegetarian options."
-            },
-            {
-                question: "Will there be transportation?",
-                answer: "We'll have shuttle buses running between the recommended hotels and Taypark House. Details will be sent closer to the date."
             },
             {
                 question: "What about gifts?",
