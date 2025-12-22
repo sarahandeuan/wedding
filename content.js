@@ -67,7 +67,6 @@ const content = {
     schedule: {
         title: "Schedule",
         events: [
-    
             {
                 time: "1:30 PM",
                 title: "Guests Arrival",
