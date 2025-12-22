@@ -8,7 +8,9 @@ const content = {
         groom: "Euan",
         date: "May 30, 2026",
         venue: "Taypark House",
-        location: "Dundee, Scotland"
+        location: "Dundee, Scotland",
+        // Optional: Add background image (1920x1080px recommended)
+        backgroundImage: "images/hero-background.jpg"
     },
 
     // Our Story Section
@@ -18,6 +20,15 @@ const content = {
             "From the moment we met, we knew there was something special. What started as a chance encounter in Edinburgh blossomed into a love story that continues to unfold with each passing day.",
             "Through adventures in the Scottish Highlands, quiet evenings by the fire, and everything in between, we've built a life filled with laughter, love, and countless memories.",
             "Now, we're thrilled to invite you to celebrate the next chapter of our journey as we say \"I do\" at the beautiful Taypark House in Dundee, surrounded by the people we love most."
+        ],
+        // Optional: Add couple photo (800x600px or 1200x800px recommended)
+        couplePhoto: "images/couple-photo.jpg",
+        // Optional: Photo gallery (600x600px square images recommended)
+        gallery: [
+            "images/gallery-1.jpg",
+            "images/gallery-2.jpg",
+            "images/gallery-3.jpg",
+            "images/gallery-4.jpg"
         ]
     },
 
@@ -29,19 +40,25 @@ const content = {
                 icon: "💒",
                 title: "Ceremony",
                 location: "Taypark House<br>Dundee, Scotland<br>DD2 1PD",
-                time: "2:00 PM"
+                time: "2:00 PM",
+                // Optional: Add venue image (600x400px recommended)
+                image: "images/ceremony-venue.jpg"
             },
             {
                 icon: "🥂",
                 title: "Drinks Reception",
                 location: "Following the ceremony<br>Taypark House Gardens",
-                time: "2:30 PM"
+                time: "2:30 PM",
+                // Optional: Add venue image (600x400px recommended)
+                image: "images/reception-venue.jpg"
             },
             {
                 icon: "🍽️",
                 title: "Dinner",
                 location: "Three-course meal<br>with wine pairings",
-                time: "4:45 PM"
+                time: "4:45 PM",
+                // Optional: Add venue image (600x400px recommended)
+                image: "images/dining-room.jpg"
             }
         ]
     },

@@ -28,6 +28,10 @@
         <div class="story-content" id="story-content">
             <!-- Content loaded from content.js -->
         </div>
+        <!-- Couple photo will be inserted here -->
+        <div id="couple-photo-container"></div>
+        <!-- Photo gallery will be inserted here -->
+        <div id="photo-gallery-container"></div>
     </section>
 
     <!-- Wedding Details Section -->
@@ -105,6 +109,13 @@
             document.getElementById('venue-name').textContent = content.hero.venue;
             document.getElementById('venue-location').textContent = content.hero.location;
 
+            // Add hero background image if provided
+            if (content.hero.backgroundImage) {
+                const heroElement = document.querySelector('.hero');
+                heroElement.classList.add('with-image');
+                heroElement.style.backgroundImage = `url('${content.hero.backgroundImage}')`;
+            }
+
             // Story section
             document.getElementById('story-title').textContent = content.story.title;
             const storyContent = document.getElementById('story-content');
@@ -114,13 +125,40 @@
                 storyContent.appendChild(p);
             });
 
+            // Add couple photo if provided
+            if (content.story.couplePhoto) {
+                const couplePhotoContainer = document.getElementById('couple-photo-container');
+                const img = document.createElement('img');
+                img.src = content.story.couplePhoto;
+                img.alt = `${content.hero.bride} and ${content.hero.groom}`;
+                img.className = 'couple-photo';
+                couplePhotoContainer.appendChild(img);
+            }
+
+            // Add photo gallery if provided
+            if (content.story.gallery && content.story.gallery.length > 0) {
+                const galleryContainer = document.getElementById('photo-gallery-container');
+                const galleryDiv = document.createElement('div');
+                galleryDiv.className = 'photo-gallery';
+                content.story.gallery.forEach((imagePath, index) => {
+                    const img = document.createElement('img');
+                    img.src = imagePath;
+                    img.alt = `Gallery photo ${index + 1}`;
+                    img.className = 'gallery-image';
+                    galleryDiv.appendChild(img);
+                });
+                galleryContainer.appendChild(galleryDiv);
+            }
+
             // Details section
             document.getElementById('details-title').textContent = content.details.title;
             const detailsGrid = document.getElementById('details-grid');
             content.details.cards.forEach(card => {
                 const cardDiv = document.createElement('div');
                 cardDiv.className = 'detail-card';
+                const imageHTML = card.image ? `<img src="${card.image}" alt="${card.title}" class="detail-card-image">` : '';
                 cardDiv.innerHTML = `
+                    ${imageHTML}
                     <div class="detail-icon">${card.icon}</div>
                     <h3>${card.title}</h3>
                     <p>${card.location}</p>
