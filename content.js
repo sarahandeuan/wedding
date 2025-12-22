@@ -190,7 +190,7 @@ const content = {
             },
             {
                 question: "Do I need a visa to travel to the UK?",
-                answer: "If you're a US citizen, you must apply for an Electronic Travel Authorization (ETA) before traveling to the UK. You can apply online at gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Please apply well in advance of your travel dates. Citizens of other countries should check their specific requirements."
+                answer: "If you're a US citizen, you must apply for an Electronic Travel Authorization (ETA) before traveling to the UK. You can apply online at gov.uk/eta/apply. Please apply well in advance of your travel dates. Citizens of other countries should check their specific requirements."
             },
             {
                 question: "Can I bring a plus-one?",
