@@ -16,24 +16,31 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// FAQ Toggle
+// FAQ Toggle - using setTimeout to ensure DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            const isActive = faqItem.classList.contains('active');
+    setTimeout(() => {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        console.log('FAQ questions found:', faqQuestions.length);
 
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                console.log('FAQ clicked, is active:', isActive);
+
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
             });
-
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
         });
-    });
+    }, 100);
 });
 
 // Smooth scroll for anchor links
