@@ -137,6 +137,14 @@ const content = {
                 ]
             },
             {
+                title: "US Citizens - ETA Required",
+                content: [
+                    "American travelers must apply for an Electronic Travel Authorization (ETA) before traveling to the UK.",
+                    "Apply online at: <a href=\"https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta\" target=\"_blank\" rel=\"noopener\">UK ETA Application</a>",
+                    "<em style=\"font-size: 0.85rem;\">Please apply well in advance of your travel dates</em>"
+                ]
+            },
+            {
                 title: "Local Attractions",
                 content: [
                     "While in Dundee, visit the V&A Museum, Discovery Point, and enjoy a walk along the beautiful River Tay waterfront.",
@@ -179,6 +187,10 @@ const content = {
             {
                 question: "What should I wear?",
                 answer: "We're asking for formal attire. Think elegant dresses, suits, and kilts are absolutely encouraged! The ceremony and reception will be indoors, but we'll have some time in the gardens for photos."
+            },
+            {
+                question: "Do I need a visa to travel to the UK?",
+                answer: "If you're a US citizen, you must apply for an Electronic Travel Authorization (ETA) before traveling to the UK. You can apply online at gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Please apply well in advance of your travel dates. Citizens of other countries should check their specific requirements."
             },
             {
                 question: "Can I bring a plus-one?",
