@@ -67,16 +67,7 @@ const content = {
     schedule: {
         title: "Schedule",
         events: [
-            {
-                time: "8:00 AM",
-                title: "Buffet Breakfast",
-                description: "Bridal party hair and makeup begins."
-            },
-            {
-                time: "12:00 PM",
-                title: "Photos",
-                description: "Bridal party and family photos before the ceremony."
-            },
+    
             {
                 time: "1:30 PM",
                 title: "Guests Arrival",
@@ -90,17 +81,7 @@ const content = {
             {
                 time: "2:30 PM",
                 title: "Drinks Reception",
-                description: "Canapés and drinks while we take more photos."
-            },
-            {
-                time: "4:00 PM",
-                title: "Call to Meal",
-                description: "Please make your way to the dining area."
-            },
-            {
-                time: "4:20 PM",
-                title: "Speeches",
-                description: "Toasts and celebration with family and friends."
+                description: "Canapés and drinks."
             },
             {
                 time: "4:45 PM",
@@ -124,7 +105,7 @@ const content = {
     rsvp: {
         title: "RSVP",
         paragraphs: [
-            "We hope you can join us for our special day! Please respond by March 30, 2026.",
+            "We hope you can join us for our special day! Please respond by March 1, 2026.",
             "Kindly let us know if you'll be attending and any dietary requirements you may have."
         ],
         buttonText: "Respond Here",
@@ -140,6 +121,7 @@ const content = {
             {
                 title: "Getting There",
                 content: [
+                    "<strong>By Bus</strong> Nonstop bus from Edinburgh Airport to Dundee town centre"
                     "<strong>By Air:</strong> Edinburgh Airport (1 hour drive) or Glasgow Airport (1.5 hours)",
                     "<strong>By Train:</strong> Dundee Railway Station (10 minutes from venue)",
                     "<strong>By Car:</strong> Free parking available at Taypark House"
@@ -203,7 +185,7 @@ const content = {
         questions: [
             {
                 question: "What should I wear?",
-                answer: "We're asking for formal attire. Think elegant dresses, suits, and kilts are absolutely encouraged! The ceremony and reception will be indoors, but we'll have some time in the gardens for photos."
+                answer: "We're asking for cocktail attire. Think elegant dresses, suits, and kilts are absolutely encouraged! The ceremony and reception will be indoors, but we'll have some time in the gardens for photos."
             },
             {
                 question: "Do I need a visa to travel to the UK?",
@@ -219,7 +201,7 @@ const content = {
             },
             {
                 question: "What about dietary requirements?",
-                answer: "Please let us know about any dietary requirements or allergies when you RSVP, and we'll make sure you're well catered for on the day."
+                answer: "Please let us know about any dietary requirements or allergies when you RSVP, and we'll make sure you're well catered for on the day. There will be vegan and vegetarian options."
             },
             {
                 question: "Will there be transportation?",
