@@ -29,19 +29,19 @@ const content = {
                 icon: "💒",
                 title: "Ceremony",
                 location: "Taypark House<br>Dundee, Scotland<br>DD2 1PD",
-                time: "3:00 PM"
+                time: "2:00 PM"
             },
             {
                 icon: "🥂",
-                title: "Reception",
+                title: "Drinks Reception",
                 location: "Following the ceremony<br>Taypark House Gardens",
-                time: "5:00 PM"
+                time: "2:30 PM"
             },
             {
                 icon: "🍽️",
                 title: "Dinner",
                 location: "Three-course meal<br>with wine pairings",
-                time: "7:00 PM"
+                time: "4:45 PM"
             }
         ]
     },
@@ -51,29 +51,54 @@ const content = {
         title: "Schedule",
         events: [
             {
-                time: "3:00 PM",
+                time: "8:00 AM",
+                title: "Buffet Breakfast",
+                description: "Bridal party hair and makeup begins."
+            },
+            {
+                time: "12:00 PM",
+                title: "Photos",
+                description: "Bridal party and family photos before the ceremony."
+            },
+            {
+                time: "1:30 PM",
+                title: "Guests Arrival",
+                description: "Welcome to Taypark House! Please arrive and take your seats."
+            },
+            {
+                time: "2:00 PM",
                 title: "Ceremony",
                 description: "Join us as we exchange vows in the stunning ceremony room at Taypark House."
             },
             {
+                time: "2:30 PM",
+                title: "Drinks Reception",
+                description: "Canapés and drinks while we take more photos."
+            },
+            {
                 time: "4:00 PM",
-                title: "Cocktail Hour",
-                description: "Canapés and drinks in the gardens while we take photos."
+                title: "Call to Meal",
+                description: "Please make your way to the dining area."
             },
             {
-                time: "5:30 PM",
-                title: "Reception",
-                description: "Speeches, toasts, and celebration with family and friends."
+                time: "4:20 PM",
+                title: "Speeches",
+                description: "Toasts and celebration with family and friends."
             },
             {
-                time: "7:00 PM",
-                title: "Dinner",
+                time: "4:45 PM",
+                title: "Meal",
                 description: "A delicious three-course meal featuring the finest Scottish ingredients."
             },
             {
-                time: "9:00 PM",
-                title: "Dancing",
-                description: "Let's dance the night away! Music, cake cutting, and celebration until midnight."
+                time: "6:30 PM",
+                title: "Evening Party",
+                description: "Let's dance the night away! Music, celebration, and fun."
+            },
+            {
+                time: "8:30 PM",
+                title: "Evening Buffet",
+                description: "Enjoy a selection of delicious evening snacks."
             }
         ]
     },
