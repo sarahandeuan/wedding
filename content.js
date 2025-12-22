@@ -140,7 +140,7 @@ const content = {
                 title: "US Citizens - ETA Required",
                 content: [
                     "American travelers must apply for an Electronic Travel Authorization (ETA) before traveling to the UK.",
-                    "Apply online at: <a href=\"https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta\" target=\"_blank\" rel=\"noopener\">UK ETA Application</a>",
+                    "Apply online at: <a href=\"https://www.gov.uk/eta/apply\" target=\"_blank\" rel=\"noopener\">UK ETA Application</a>",
                     "<em style=\"font-size: 0.85rem;\">Please apply well in advance of your travel dates</em>"
                 ]
             },
