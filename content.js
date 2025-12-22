@@ -121,7 +121,7 @@ const content = {
             {
                 title: "Getting There",
                 content: [
-                    "<strong>By Bus</strong> Nonstop bus from Edinburgh Airport to Dundee town centre"
+                    "<strong>By Bus:</strong> Nonstop bus from Edinburgh Airport to Dundee town centre",
                     "<strong>By Air:</strong> Edinburgh Airport (1 hour drive) or Glasgow Airport (1.5 hours)",
                     "<strong>By Train:</strong> Dundee Railway Station (10 minutes from venue)",
                     "<strong>By Car:</strong> Free parking available at Taypark House"
