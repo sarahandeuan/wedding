@@ -76,12 +76,12 @@ const content = {
                 description: "Join us as we exchange vows in the stunning ceremony room at Taypark House."
             },
             {
-                time: "2:30 PM",
+                time: "3:00 PM",
                 title: "Drinks Reception",
                 description: "Canapés and drinks."
             },
             {
-                time: "4:45 PM",
+                time: "5:00 PM",
                 title: "Meal",
                 description: "A delicious three-course meal featuring the finest Scottish ingredients."
             },
@@ -118,7 +118,7 @@ const content = {
             {
                 title: "Getting There",
                 content: [
-                    "<strong>By Bus:</strong> Nonstop bus from Edinburgh Airport to Dundee town centre",
+                    "<strong>By Bus:</strong> Nonstop bus from Edinburgh Airport to Dundee town centre (link found <a href=\"https://fly-coach.co.uk\" target=\"_blank\" rel=\"noopener\">here</a>)",
                     "<strong>By Air:</strong> Edinburgh Airport (1 hour drive) or Glasgow Airport (1.5 hours)",
                     "<strong>By Train:</strong> Dundee Railway Station (10 minutes from venue)",
                     "<strong>By Car:</strong> Free parking available at Taypark House"
@@ -182,7 +182,7 @@ const content = {
         questions: [
             {
                 question: "What should I wear?",
-                answer: "We're asking for cocktail attire. Think elegant dresses, suits, and kilts are absolutely encouraged! The ceremony and reception will be indoors, but we'll have some time in the gardens for photos."
+                answer: "We're asking for cocktail attire. Men are invited to wear suits or kilts. The ceremony will be indoors and the reception will be outdoors weather permitting."
             },
             {
                 question: "Do I need a visa to travel to the UK?",
@@ -195,10 +195,6 @@ const content = {
             {
                 question: "What about dietary requirements?",
                 answer: "Please let us know about any dietary requirements or allergies when you RSVP, and we'll make sure you're well catered for on the day. There will be vegan and vegetarian options."
-            },
-            {
-                question: "What about gifts?",
-                answer: "Your presence is the greatest gift! However, if you'd like to give something, we'd be grateful for contributions to our honeymoon fund. Details will be included with your invitation."
             }
         ]
     },
