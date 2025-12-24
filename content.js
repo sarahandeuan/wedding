@@ -30,35 +30,13 @@ const content = {
         ]
     },
 
-    // Wedding Details Section
-    details: {
-        title: "Wedding Details",
-        cards: [
-            {
-                icon: "💒",
-                title: "Ceremony",
-                location: "Taypark House<br>Dundee, Scotland<br>DD2 1PD",
-                time: "2:00 PM",
-                // Optional: Add venue image (600x400px recommended)
-                image: "images/ceremony-venue.jpg"
-            },
-            {
-                icon: "🥂",
-                title: "Drinks Reception",
-                location: "Following the ceremony<br>Taypark House Gardens",
-                time: "2:30 PM",
-                // Optional: Add venue image (600x400px recommended)
-                image: "images/reception-venue.jpg"
-            },
-            {
-                icon: "🍽️",
-                title: "Dinner",
-                location: "Three-course meal<br>with wine pairings",
-                time: "4:45 PM",
-                // Optional: Add venue image (600x400px recommended)
-                image: "images/dining-room.jpg"
-            }
-        ]
+    // Venue Section
+    venue: {
+        title: "Venue",
+        name: "Taypark House",
+        address: "484 Perth Road<br>Dundee, Scotland<br>DD2 1LR",
+        // Optional: Add venue photo (1200x800px recommended)
+        photo: "images/taypark-house.jpg"
     },
 
     // Schedule/Timeline Section
