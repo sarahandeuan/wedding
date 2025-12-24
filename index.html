@@ -34,14 +34,17 @@
         <div id="photo-gallery-container"></div>
     </section>
 
-    <!-- Wedding Details Section -->
-    <section id="details">
-        <h2 class="section-title" id="details-title">Wedding Details</h2>
-        <div class="details-grid" id="details-grid">
+    <!-- Venue Section -->
+    <section id="venue">
+        <h2 class="section-title" id="venue-title">Venue</h2>
+        <div class="venue-content" id="venue-content">
             <!-- Content loaded from content.js -->
         </div>
+    </section>
 
-        <h2 class="section-title" style="margin-top: 6rem;" id="schedule-title">Schedule</h2>
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <h2 class="section-title" id="schedule-title">Schedule</h2>
         <div class="timeline" id="timeline">
             <!-- Content loaded from content.js -->
         </div>
@@ -150,22 +153,18 @@
                 galleryContainer.appendChild(galleryDiv);
             }
 
-            // Details section
-            document.getElementById('details-title').textContent = content.details.title;
-            const detailsGrid = document.getElementById('details-grid');
-            content.details.cards.forEach(card => {
-                const cardDiv = document.createElement('div');
-                cardDiv.className = 'detail-card';
-                const imageHTML = card.image ? `<img src="${card.image}" alt="${card.title}" class="detail-card-image">` : '';
-                cardDiv.innerHTML = `
-                    ${imageHTML}
-                    <div class="detail-icon">${card.icon}</div>
-                    <h3>${card.title}</h3>
-                    <p>${card.location}</p>
-                    <p class="time">${card.time}</p>
-                `;
-                detailsGrid.appendChild(cardDiv);
-            });
+            // Venue section
+            document.getElementById('venue-title').textContent = content.venue.title;
+            const venueContent = document.getElementById('venue-content');
+            const venueDiv = document.createElement('div');
+            venueDiv.className = 'venue-info';
+            const photoHTML = content.venue.photo ? `<img src="${content.venue.photo}" alt="${content.venue.name}" class="venue-photo">` : '';
+            venueDiv.innerHTML = `
+                ${photoHTML}
+                <h3>${content.venue.name}</h3>
+                <p>${content.venue.address}</p>
+            `;
+            venueContent.appendChild(venueDiv);
 
             // Schedule section
             document.getElementById('schedule-title').textContent = content.schedule.title;
