@@ -305,7 +305,7 @@ section.visible {
     object-fit: cover;
     border-radius: 2px;
     margin-bottom: 2rem;
-    margin-top: -3rem;
+    margin-top: 2rem;
     margin-left: -2rem;
     margin-right: -2rem;
     width: calc(100% + 4rem);

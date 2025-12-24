@@ -36,7 +36,7 @@ const content = {
         name: "Taypark House",
         address: "484 Perth Road<br>Dundee, Scotland<br>DD2 1LR",
         // Optional: Add venue photo (1200x800px recommended)
-        photo: "images/taypark-house.jpg"
+        photo: "images/Taypark house.jpg"
     },
 
     // Schedule/Timeline Section
@@ -92,7 +92,7 @@ const content = {
                 title: "Getting There",
                 content: [
                     "<strong>By Bus:</strong> Nonstop bus from Edinburgh Airport to Dundee town centre (link found <a href=\"https://fly-coach.co.uk\" target=\"_blank\" rel=\"noopener\">here</a>)",
-                    "<strong>By Air:</strong> Edinburgh Airport (1 hour drive) or Glasgow Airport (1.5 hours)",
+                    "<strong>By Air:</strong> Fly into Edinburgh Airport (1 hour drive), Glasgow Airport (1.5 hours), or take a connecting flight from Heathrow to Dundee Airport (5 minutes from venue)",
                     "<strong>By Train:</strong> Dundee Railway Station (10 minutes from venue)",
                     "<strong>By Car:</strong> Free parking available at Taypark House"
                 ]
