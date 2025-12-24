@@ -44,32 +44,27 @@ const content = {
         title: "Schedule",
         events: [
             {
-                time: "1:30 PM",
+                time: "2:30 PM",
                 title: "Guests Arrival",
                 description: "Welcome to Taypark House! Please arrive and take your seats."
             },
             {
-                time: "2:00 PM",
+                time: "3:00 PM",
                 title: "Ceremony",
                 description: "Join us as we exchange vows in the stunning ceremony room at Taypark House."
             },
             {
-                time: "3:00 PM",
+                time: "4:00 PM",
                 title: "Drinks Reception",
                 description: "Canapés and drinks."
             },
             {
-                time: "5:00 PM",
+                time: "6:00 PM",
                 title: "Meal",
                 description: "A delicious three-course meal featuring the finest Scottish ingredients."
             },
             {
-                time: "6:30 PM",
-                title: "Evening Party",
-                description: "Let's dance the night away! Music, celebration, and fun."
-            },
-            {
-                time: "8:30 PM",
+                time: "9:30 PM",
                 title: "Evening Buffet",
                 description: "Enjoy a selection of delicious evening snacks."
             }
