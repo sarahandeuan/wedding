@@ -20,14 +20,9 @@ const content = {
             "Euan and Sarah met during a summer in college and quickly realized they were meant to be together, even across two countries. Over the years, they shared life in Scotland and the U.S., grew closer through every challenge, and eventually settled in Boston, where they married in a small, heartfelt celebration. Now they spend their days together with their cat, Cookie, and can't wait to share this next chapter with you."
         ],
         // Optional: Add couple photo (800x600px or 1200x800px recommended)
-        couplePhoto: "images/couple-photo.jpg",
+        // couplePhoto: "images/couple-photo.jpg",
         // Optional: Photo gallery (600x600px square images recommended)
-        gallery: [
-            "images/gallery-1.jpg",
-            "images/gallery-2.jpg",
-            "images/gallery-3.jpg",
-            "images/gallery-4.jpg"
-        ]
+        // gallery: []
     },
 
     // Venue Section
