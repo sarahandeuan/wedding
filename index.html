@@ -124,31 +124,6 @@
                 storyContent.appendChild(p);
             });
 
-            // Add couple photo if provided
-            if (content.story.couplePhoto) {
-                const couplePhotoContainer = document.getElementById('couple-photo-container');
-                const img = document.createElement('img');
-                img.src = content.story.couplePhoto;
-                img.alt = `${content.hero.bride} and ${content.hero.groom}`;
-                img.className = 'couple-photo';
-                couplePhotoContainer.appendChild(img);
-            }
-
-            // Add photo gallery if provided
-            if (content.story.gallery && content.story.gallery.length > 0) {
-                const galleryContainer = document.getElementById('photo-gallery-container');
-                const galleryDiv = document.createElement('div');
-                galleryDiv.className = 'photo-gallery';
-                content.story.gallery.forEach((imagePath, index) => {
-                    const img = document.createElement('img');
-                    img.src = imagePath;
-                    img.alt = `Gallery photo ${index + 1}`;
-                    img.className = 'gallery-image';
-                    galleryDiv.appendChild(img);
-                });
-                galleryContainer.appendChild(galleryDiv);
-            }
-
             // Venue section
             document.getElementById('venue-title').textContent = content.venue.title;
             const venueContent = document.getElementById('venue-content');
