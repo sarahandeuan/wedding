@@ -74,7 +74,7 @@ const content = {
             "Kindly let us know if you'll be attending and any dietary requirements you may have."
         ],
         buttonText: "Respond Here",
-        buttonLink: "https://forms.google.com/your-form-link",
+        buttonLink: "https://rsvp.sarahandeuan.com",
         contactText: "Or contact us directly at:",
         email: "wedding@sarahandeuan.com"
     },
