@@ -57,8 +57,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Highlight active section in navigation
-function updateActiveNav() {
+// Show/hide navigation based on scroll position and highlight active section
+function updateNavigation() {
+    const desktopNav = document.querySelector('.desktop-nav');
+    const hero = document.querySelector('.hero');
+    const heroHeight = hero ? hero.offsetHeight : 0;
+
+    // Show nav after scrolling past hero
+    if (window.pageYOffset > heroHeight) {
+        desktopNav.classList.add('visible');
+    } else {
+        desktopNav.classList.remove('visible');
+    }
+
+    // Update active section
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.desktop-nav a');
 
@@ -80,5 +92,5 @@ function updateActiveNav() {
     });
 }
 
-window.addEventListener('scroll', updateActiveNav);
-window.addEventListener('load', updateActiveNav);
+window.addEventListener('scroll', updateNavigation);
+window.addEventListener('load', updateNavigation);

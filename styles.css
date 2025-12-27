@@ -684,10 +684,18 @@ html {
     z-index: 1000;
     padding: 2rem 0;
     display: none;
-    background: rgba(248, 246, 243, 0.85);
+    background: rgba(248, 246, 243, 0.7);
     backdrop-filter: blur(10px);
     border-radius: 0 12px 12px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.desktop-nav.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .desktop-nav ul {
