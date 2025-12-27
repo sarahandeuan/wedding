@@ -674,3 +674,73 @@ footer p {
 html {
     scroll-behavior: smooth;
 }
+
+/* Desktop Navigation Menu */
+.desktop-nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 2rem 0;
+    display: none;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-nav li {
+    margin: 0;
+}
+
+.desktop-nav a {
+    display: block;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    color: var(--charcoal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.desktop-nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--sage);
+    transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover {
+    opacity: 1;
+    color: var(--sage);
+    padding-left: 2.5rem;
+}
+
+.desktop-nav a:hover::before {
+    width: 1.5rem;
+}
+
+.desktop-nav a.active {
+    opacity: 1;
+    color: var(--sage);
+    font-weight: 500;
+}
+
+/* Show desktop nav on larger screens */
+@media (min-width: 1024px) {
+    .desktop-nav {
+        display: block;
+    }
+}
