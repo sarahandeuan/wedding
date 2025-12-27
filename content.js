@@ -97,7 +97,7 @@ const content = {
                 content: [
                     "<strong>Apex City Quay Hotel</strong><br>1 West Victoria Dock Road<br><a href=\"tel:01382202404\">01382 202 404</a>",
                     "<strong>Malmaison Dundee</strong><br>44 Whitehall Crescent<br><a href=\"tel:01382339715\">01382 339 715</a>",
-                    "<em style=\"font-size: 0.85rem;\">Mention \"Sarah & Euan's Wedding\" for special rates</em>"
+                    "<strong>Four Points by Sheraton Dundee</strong><br>Apex City Quay<br><a href=\"https://www.marriott.com/en-gb/hotels/dnddu-four-points-flex-dundee/overview/\" target=\"_blank\" rel=\"noopener\">Book Online</a>"
                 ]
             },
             {
@@ -121,27 +121,8 @@ const content = {
     // Registry Section
     registry: {
         title: "Registry",
-        intro: "Your presence at our wedding is the greatest gift of all. However, if you would like to honor us with a gift, we've registered at the following stores for your convenience.",
-        options: [
-            {
-                title: "John Lewis & Partners",
-                description: "For home essentials and beautiful pieces to start our new life together.",
-                linkText: "View Registry",
-                linkUrl: "https://www.johnlewis.com"
-            },
-            {
-                title: "Honeymoon Fund",
-                description: "We're planning an adventure to Japan! Contributions toward our honeymoon would be greatly appreciated.",
-                linkText: "Contribute",
-                linkUrl: "#"
-            },
-            {
-                title: "Charity Donation",
-                description: "In lieu of gifts, you may also consider a donation to one of our favorite charities in our names.",
-                linkText: "Learn More",
-                linkUrl: "#"
-            }
-        ]
+        intro: "Coming soon! Check back for registry details.",
+        options: []
     },
 
     // FAQ Section
